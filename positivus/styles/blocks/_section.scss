@@ -1,3 +1,28 @@
 .section {
 	padding-block: var(--section-padding-y);
+
+	&__header {
+		display: flex;
+		column-gap: 40px;
+		align-items: center;
+
+		@include mobile {
+			flex-direction: column;
+			text-align: center;
+			row-gap: 30px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 80px;
+
+			@include mobile {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&__description {
+		max-width: 580px;
+	}
 }
+
